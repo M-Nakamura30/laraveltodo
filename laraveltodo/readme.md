@@ -1,6 +1,6 @@
 # laraveltodo
 これは、次のサイトを参考に学習したアプリケーションです。
-サイトの載っている環境では作成してません。
+サイトに載っている環境では作成してません。
 
 
 [*入門Laravelチュートリアル*](https://www.hypertextcandy.com/laravel-tutorial-introduction)
