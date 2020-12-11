@@ -1,4 +1,4 @@
-#laraveltodo
+# laraveltodo
 これは、次のサイトを参考に学習したアプリケーションです。
 サイトの載っている環境では作成してません。
 
@@ -7,7 +7,7 @@
 [*Hypertext Candy*](https://www.hypertextcandy.com/writers/Masahiro+Harada)著
 
 
-##環境
+## 環境
 * Windows 10 Home
 * PHP version 7.4.1
 * Laravel version 5.7
