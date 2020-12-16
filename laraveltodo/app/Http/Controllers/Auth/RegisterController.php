@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -50,8 +50,13 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|string|max:255',
+            //ルールの引数である users は参照するテーブル名です。'email' => 'unique:users' は、email の入力値は users テーブルの email カラムで使われていない値でなければいけないという意味
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+        ],[],[
+            'name' = 'ユーザー名',
+            'email' => 'メールアドレス',
+            'passeord' => 'パスワード',
         ]);
     }
 
