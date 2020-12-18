@@ -10,13 +10,17 @@ use Illuminate\Http\Request;
 use App\Http\Requests\EditTask;
 //バリデート
 use App\Http\Requests\CreateTask;
+use Illuminate\Support\Facades\Auth;
 
 class TaskController extends Controller
 {
 	public function index(int $id)
 	{
 		//全てのフォルダお取得
-		$folders = Folder::all();
+		// $folders = Folder::all();
+
+		//ユーザーのフォルダを取得
+		$folders = Auth::user()->folders()->get();
 
 		//プライマリキーのカラムを条件として一行分のデータを取得
 		$current_folder = Folder::find($id);

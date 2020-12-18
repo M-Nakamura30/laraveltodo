@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Folder;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateFolder;
+use Illuminate\Support\Facades\Auth;
 
 
 // フォルダに登録
@@ -32,8 +33,11 @@ class FolderController extends Controller
     	//プロパティとして取得
     	$folder->title = $request->title;
 
+        //ユーザーに紐づけ
+        Auth::user()->folders()->save($folder);
+
     	//インスタンスの状態をデータベースに保存
-    	$folder->save();
+    	// $folder->save();
 
     	//リダイレクト先を指定するために、redirect メソッドに続いて route メソッドを呼び出し
     	return redirect()->route('tasks.index', [
