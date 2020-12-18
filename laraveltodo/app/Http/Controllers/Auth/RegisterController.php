@@ -54,9 +54,9 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
         ],[],[
-            'name' = 'ユーザー名',
+            'name' => 'ユーザー名',
             'email' => 'メールアドレス',
-            'passeord' => 'パスワード',
+            'password' => 'パスワード',
         ]);
     }
 
